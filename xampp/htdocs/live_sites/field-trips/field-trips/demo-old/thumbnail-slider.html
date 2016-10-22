@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta content="charset=utf-8">
+        <title>FlexSlider 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+        <!-- Demo CSS -->
+        <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        <script src="js/modernizr.js"></script>
+
+    </head>
+    <body>
+
+        <div id="container" class="cf">
+            <div id="main" role="main">
+                <section class="slider">
+                    <div id="carousel" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                            <li>
+                                <p><img src="images/trinity.png">Trinity School (USA)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slider" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/children-banner.png" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_donut.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_caramel.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_lemon.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_donut.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_caramel.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_lemon.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_donut.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/kitchen_adventurer_caramel.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev">Prev</a>
+                        <div class="custom-controls-container"></div>
+                        <a href="#" class="flex-next">Next</a>
+                    </div>
+
+                </section>
+            </div>
+
+        </div>
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+        <!-- FlexSlider -->
+        <script defer src="js/jquery.flexslider.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                SyntaxHighlighter.all();
+            });
+            $(window).load(function() {
+                $('#carousel').flexslider({
+                    animation: "slide",
+                    controlNav: false,
+                    animationLoop: true,
+                    slideshow: true,
+                    itemWidth: 210,
+                    itemMargin: 0,
+                    asNavFor: '#slider',
+                    keyboard: false
+                });
+
+                $('#slider').flexslider({
+                    animation: "fade",
+                    controlNav: false,
+                    animationLoop: true,
+                    slideshow: true,
+                    sync: "#carousel",
+                    start: function(slider) {
+                        $('body').removeClass('loading');
+                    }
+                });
+            });
+        </script>
+
+        <!-- Optional FlexSlider Additions -->
+        <script src="js/jquery.easing.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script defer src="js/demo.js"></script>
+
+    </body>
+</html>
